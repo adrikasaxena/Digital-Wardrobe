@@ -1,0 +1,185 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.75s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.85s ease-out both;
+}
+
+.animate-rise {
+  animation: rise 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.animate-pop {
+  animation: popIn 0.5s ease-out both;
+}
+
+.font-milano {
+  font-family: Milano, "Bodoni Moda", "Didot", "Times New Roman", serif;
+}
+
+@keyframes assembleTop {
+  0%,
+  100% {
+    transform: translate(0, -56px) scale(0.95);
+  }
+  45% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes assembleBottom {
+  0%,
+  100% {
+    transform: translate(0, 56px) scale(0.95);
+  }
+  45% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes assembleLeft {
+  0%,
+  100% {
+    transform: translate(-62px, 0) scale(0.95);
+  }
+  45% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes assembleRight {
+  0%,
+  100% {
+    transform: translate(62px, 0) scale(0.95);
+  }
+  45% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes assembleShoes {
+  0%,
+  100% {
+    transform: translate(0, 74px) scale(0.9);
+  }
+  45% {
+    transform: translate(0, 12px) scale(1);
+  }
+}
+
+.builder-assembly {
+  position: relative;
+  height: 320px;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #f2e7d8 0%, #f8f2e9 100%);
+  border: 1px solid rgba(88, 54, 34, 0.14);
+  overflow: hidden;
+}
+
+.assembly-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: rgba(88, 54, 34, 0.08);
+}
+
+.assembly-piece {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 122px;
+  height: 148px;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(52, 34, 21, 0.16);
+  transform: translate(-50%, -50%);
+}
+
+.piece-top {
+  margin-left: -61px;
+  margin-top: -100px;
+  animation: assembleTop 4.6s ease-in-out infinite;
+}
+
+.piece-bottom {
+  margin-left: -61px;
+  margin-top: -14px;
+  animation: assembleBottom 4.6s ease-in-out infinite;
+}
+
+.piece-left {
+  margin-left: -137px;
+  margin-top: -58px;
+  width: 104px;
+  height: 126px;
+  animation: assembleLeft 4.6s ease-in-out infinite;
+}
+
+.piece-right {
+  margin-left: 33px;
+  margin-top: -58px;
+  width: 104px;
+  height: 126px;
+  animation: assembleRight 4.6s ease-in-out infinite;
+}
+
+.piece-shoes {
+  margin-left: -61px;
+  margin-top: 84px;
+  width: 122px;
+  height: 92px;
+  animation: assembleShoes 4.6s ease-in-out infinite;
+}
