@@ -1,0 +1,82 @@
+/* 9:16 container — tall, phone-style */
+.carousel-box {
+  width: 360px;
+  height: 640px; /* 9:16 ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f5f1ea;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.carousel-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SLIDE IN */
+.slide-in-top {
+  transform: translateY(-100%);
+  animation: inTop 0.7s forwards;
+}
+.slide-in-right {
+  transform: translateX(100%);
+  animation: inRight 0.7s forwards;
+}
+.slide-in-bottom {
+  transform: translateY(100%);
+  animation: inBottom 0.7s forwards;
+}
+.slide-in-left {
+  transform: translateX(-100%);
+  animation: inLeft 0.7s forwards;
+}
+
+/* SLIDE OUT (opposite direction) */
+.slide-out-top {
+  animation: outBottom 0.7s forwards;
+}
+.slide-out-right {
+  animation: outLeft 0.7s forwards;
+}
+.slide-out-bottom {
+  animation: outTop 0.7s forwards;
+}
+.slide-out-left {
+  animation: outRight 0.7s forwards;
+}
+
+/* KEYFRAMES */
+@keyframes inTop {
+  to { transform: translateY(0); }
+}
+@keyframes inRight {
+  to { transform: translateX(0); }
+}
+@keyframes inBottom {
+  to { transform: translateY(0); }
+}
+@keyframes inLeft {
+  to { transform: translateX(0); }
+}
+
+@keyframes outTop {
+  to { transform: translateY(-100%); }
+}
+@keyframes outRight {
+  to { transform: translateX(100%); }
+}
+@keyframes outBottom {
+  to { transform: translateY(100%); }
+}
+@keyframes outLeft {
+  to { transform: translateX(-100%); }
+}
